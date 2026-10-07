@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">DAILY ROUTINE</p>
+        <h1>Habit Tracker</h1>
+        <p class="subtitle">Small steps every day.</p>
+      </div>
+      <div class="date-box">
+        <span id="today"></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats">
+        <div class="stat-card">
+          <span class="stat-label">Today's Progress</span>
+          <strong id="progressText">0%</strong>
+          <div class="progress-bar">
+            <div id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Completed Today</span>
+          <strong id="completedText">0 / 0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Best Current Streak</span>
+          <strong id="bestStreakText">0 days</strong>
+        </div>
+      </section>
+
+      <section class="add-section card">
+        <h2>Add a Habit</h2>
+        <form id="habitForm">
+          <input
+            type="text"
+            id="habitInput"
+            placeholder="e.g. Read 20 pages"
+            maxlength="50"
+            autocomplete="off"
+            required
+          >
+          <button type="submit">+ Add Habit</button>
+        </form>
+      </section>
+
+      <section class="habits-section card">
+        <div class="section-heading">
+          <div>
+            <h2>Today's Checklist</h2>
+            <p id="habitCount">0 habits</p>
+          </div>
+          <button id="clearCompletedBtn" class="secondary-btn" type="button">
+            Clear Completed
+          </button>
+        </div>
+
+        <div id="habitList" class="habit-list"></div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">✓</div>
+          <h3>No habits yet</h3>
+          <p>Add your first habit above and start building your routine.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with HTML, CSS &amp; JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
